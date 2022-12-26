@@ -25,16 +25,14 @@ namespace YourClient
         }
 		
         public void OnPlayerJoined(Player player)
-		{
-            APIUser apiUser = player.prop_APIUser_0;         
-            if (apiUser == null) return;
+	{         
+            if (player.prop_APIUser_0 == null) return;
             LoggerInstance.Msg($"Player \"{apiUser.displayName}\" joined.");
         }
 
         public void OnPlayerLeft(Player player)
         {
-           APIUser apiUser = player.prop_APIUser_0;
-           if (apiUser == null) return;
+           if (player.prop_APIUser_0 == null) return;
            LoggerInstance.Msg($"Player \"{apiUser.displayName}\" left.");
         }
     }
